@@ -40,7 +40,7 @@ class Reading(models.Model):
     user = models.ForeignKey(User, related_name ='readings')
     cardname = models.CharField(max_length=50)
     card_content = models.CharField(max_length=50)
-    image = models.ImageField(upload_to='images/')
+    image = models.CharField(max_length=50)
     likes = models.ManyToManyField(User, blank=True, related_name='liked_reading')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
