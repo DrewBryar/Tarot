@@ -4,7 +4,7 @@ from .models import *
 import bcrypt
 
 CARD_LIST = [
-    {'name': 'The Fool', 'image': 'image.png', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing'}},
+    {'name': 'The Fool', 'image': 'images/joker.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing'}},
     {'name': 'The Magician', 'image': 'image.png', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing'}},
     {'name': 'The High Priestess', 'image': 'image.png', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing'}},
     {'name': 'The Empress', 'image': 'image.png', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing'}},
@@ -32,7 +32,10 @@ CARD_LIST = [
 
 
 def index(request):
-    return render(request, "tarot_app/tarot.html")
+    context = {
+        "cards":CARD_LIST
+    }
+    return render(request, "tarot_app/tarot.html",context)
 
 
 def register(request):
