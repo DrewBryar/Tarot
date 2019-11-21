@@ -7,3 +7,62 @@
 /* h1{
     color: red;
 } */
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.affix + .container-fluid {
+    padding-top: 70px;
+}
+
+.col-md-3 img {
+    padding: 50px;
+    width: auto;
+    transition: transform .2s;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+
+.wall{
+    background: rgb(49, 48, 48);
+}
+.overlay {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 64px;
+    right: 0;
+    height: 550px;
+    width: 325px;
+    opacity: 0;
+    transition: 1s ease;
+    background-color: rgba(61, 61, 61, 0.699);
+    text-align: center;
+    color: white;
+}
+.col-md-3:hover .overlay {
+    opacity: 1;
+  }
+.card_name{
+    font-size:xx-large;
+    margin-top:20px;
+
+}
+
+.user_name{
+    margin-top: 300px;
+    font-size: x-large;
+
+}
+.comments{
+    font-size: large;
+}
+.wall_title{
+    background-color: dimgrey;
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 0%;
+}

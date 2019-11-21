@@ -12,14 +12,14 @@
   {% load static %}
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'tarot_app/css/style.css' %}">
-  <title>Document</title>
+  <title>Lil Tarot Loverrz</title>
 </head>
 
 <body>
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">WebSiteName</a>
+        <a class="navbar-brand" href="#">Lil Tarot Loverrz</a>
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
@@ -32,41 +32,31 @@
 
 
   <div class="row">
-    <div class = "hero col">
+    <div class="hero col-md-6 col-md-offset-1">
       <h1>Claim Your Fate</h1>
+      <p>This is your grand fate. The burning stars immolate the loom of destiny. The only thing certain is uncertainty.
+      </p>
     </div>
-      <img src = "static/images/tarot_back.jpg" class= "img-rounded" alt="card back">
+    <a href="#"><img src="static/images/tarot_back.jpg" class="img-rounded" alt="card back"></a>
   </div>
-<!-- 
-  <img src="{% static cards.0.image %}" >
-  <img src="{% static cards.1.image %}" >
-  <img src="{% static cards.2.image %}" >
-  <img src="{% static cards.3.image %}" >
-  <img src="{% static cards.4.image %}" >
-  <img src="{% static cards.5.image %}" >
-  <img src="{% static cards.6.image %}" >
-  <img src="{% static cards.7.image %}" >
-  <img src="{% static cards.8.image %}" >
-  <img src="{% static cards.9.image %}" >
-  <img src="{% static cards.10.image %}" >
-  <img src="{% static cards.11.image %}" >
-  <img src="{% static cards.12.image %}" >
-  <img src="{% static cards.13.image %}" >
-  <img src="{% static cards.14.image %}" >
-  <img src="{% static cards.15.image %}" >
-  <img src="{% static cards.16.image %}" >
-  <img src="{% static cards.17.image %}" >
-  <img src="{% static cards.18.image %}" >
-  <img src="{% static cards.19.image %}" >
-  <img src="{% static cards.20.image %}" > -->
-
-
-  
-<div class="row">
-  <div>
-
+  <br>
+  <div class="row wall">
+    <div class="col-md-12">
+      <!-- for #reading# in #readings#-->
+      <h2 class="wall_title col-md-12">Tarot Feed</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="static/images/sun.jpg" class="img-rounded popout img-fluid" alt="card back">
+          <div class="overlay">
+            <div class="card_name">ZAWARUDO</div>
+            <div class="user_name">Ariel</div>
+            <div>Drew Likes This!</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+
 </body>
 
 </html>
