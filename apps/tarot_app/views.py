@@ -245,3 +245,7 @@ def login(request):
 def logout(request):
     request.session.clear()
     return redirect('/')
+
+def tarot_question(request):
+    request.session.clear()
+    return redirect('/')
