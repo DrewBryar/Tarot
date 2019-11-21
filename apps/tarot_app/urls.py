@@ -5,6 +5,8 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^tarot$', views.tarot),
     url(r'^tarot/questionaire$', views.tarot_question),
+    url(r'^tarot/questionaire/mood$', views.tarot_question_mood),
+    url(r'^tarot/questionaire/mood_ask$', views.tarot_question_mood_ask),
     url(r'^user/register$', views.register),
     url(r'^user/login$', views.login),
     url(r'^user/logout$', views.logout)
