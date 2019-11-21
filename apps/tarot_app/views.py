@@ -78,52 +78,50 @@ CARD_LIST = [
     {'name': 'Death', 'image': 'images/death.jpg', 'description': 'Endings and transition.', 'categories': {
         'love': 'Death shows a time of significant transformation, change and transition. Today, you need to transform yourself and clear away the old to bring in the new. Any change should be welcomed as a positive, cleansing, transformational force in your life. The death and clearing away of limiting factors can open the door to a broader, more satisfying experience of life. This will attract others curiosity and interest in you.', 
         'career': 'The Death card has elements of a sudden and unexpected change. Death happens to everyone, no matter who you are, how much money you have, where you live, or what colour your skin is; it is the same with a significant change. So, the Death card can be a sign you may feel as though you are caught in the path of sweeping change and cannot escape its effects. Although the upheaval may seem unwanted and painful, this massive change could bring with it a series of unexpected surprises that create new opportunities and advantages for you. Every ending, has a new beginning.',
-        'home': 'a thing',
-        'friendship': 'a thing',
+        'friendship': 'Death is a sign that you need to learn to let go of unhealthy attachments in your life to pave the way to a fuller, more fulfilled life of deeper meaning and significance. Death teaches you to let go of outworn and outgrown ways of life and to move forward from them. This is a perfect card to break a bad habit or pattern of behaviour. See this as a time to cut out excess and let go of what is unnecessary for your life. Purge the old belongings, memories and baggage that are getting in your way. Throw away that toxic friend who never sends you back compliments. You really dont need them.',
         'moody':'The Death card is probably the most feared and misunderstood of all the cards in the Tarot deck. Just mention the card’s name and most people freak out, worried they will suddenly keel over and die as soon as this card appears. Relax! The Death card can be one of the most positive cards in the deck. You must close one door to open another. You need to put the past behind you and part ways, ready to embrace new opportunities and possibilities. It may be difficult to let go of the past, but you will soon see its importance and the promise of renewal and transformation. If you resist these necessary endings, you may experience pain, both emotionally and physically, but if you exercise your imagination and visualise a new possibility, you allow more constructive patterns to emerge.'}},
-    {'name': 'Temperance', 'image': 'images/temperance.jpg', 'description': 'we live in a society', 'categories': {
+    {'name': 'Temperance', 'image': 'images/temperance.jpg', 'description': 'Balance and patience.', 'categories': {
+        'love': 'Today, the Temperance card shows that you have a clear, long-term vision of what you want to achieve. You are not rushing things along; instead, you are taking your time to ensure that you plot out exactly what it is you want to receive. You know you need a moderate, guided approach to reach your goals. Take your time with planning out how to woo your potential soulmate.', 
+        'career': 'If your work life is more stressful than usual, today this card calls on you to remain calm, even when life feels stressful or frantic. Maintain an even temperament and manage your emotions. You have learned to keep composed in stressful situations. Little things don’t get to you, thanks to your seemingly abundant source of patience. Your respect for balance and tranquillity is what will help you achieve and experience fulfilment in your life.',
+        'home':'Temperance asks you to take the middle path and accommodate all perspectives. Now is not the time to be highly opinionated or controversial. Be the peacekeeper and take a balanced and moderate approach, avoiding any extremes. Include others and bring together diverse groups of people to create harmony and cooperation. By working together, you will collectively leverage the right mix of talents, experiences, abilities and skills.',
+        'friendship': 'There is alchemy within Temperance. This Tarot card is about blending, mixing, and combining diverse elements in a way that creates something new and even more valuable than its separate parts. ‘Blending’ can take on many forms; for example, a blended family, an artist who blends different materials or techniques, a bartender who mixes new and exciting cocktails, or a chef who combines different cuisines and cooking styles. Today Temperance asks you to blend more into your everyday friend group. Talk to the more quiet person in your office or class. Involve a minority. Be inclusive to more than your usual.',
+        'moody':'Temperance is the card for bringing balance, patience and moderation into your life. You are being invited to stabilise your energy and to allow the life force to flow through you without force or resistance. It’s time to recover your flow and get your life back into order and balance.'}},
+    {'name': 'The Devil', 'image': 'images/devil.jpg', 'description': 'Nonconformity and restriction.', 'categories': {
+        'love': 'In love, the Devil can show a powerful attachment between two people, like a new romance still in its ‘honeymoon phase’. Be careful, though, because, with the Devil card, this healthy attachment can turn into an unhealthy, co-dependent relationship if you lose connection with your inner guidance or don’t protect your personal boundaries.', 
+        'career': 'You know how we are all working for the man? Today do something to free yourself from restrictions. Treat yourself to a little pleasure in life. Take that last slice of pizza. Steal those office supplies you have been eyeing. Go punch a homeless guy (Tyrell Wellick style). Vape. Tell Karen from HR how you really really feel. We are not robots, so live life to its fullest today.',
+        'friendship': 'When the Devil shows up in a Tarot reading, see it as an opportunity to bring these negative influences into your conscious awareness, so you can then take action to free yourself from their hold. Shine your light on the negative patterns that have been standing in your way for so long, and over time, you will loosen the grip they have on you. Given that the Devil is a Major Arcana card, it is unlikely that you will be free from your addictions and dependencies overnight. It may be a recurring pattern for you, and it will take a tremendous amount of willpower and strength to free yourself from their influence. But know this: it IS possible, and it is up to you to make it happen.',
+        'moody':'The Devil card represents your shadow (or darker) side and the negative forces that constrain you and hold you back from being the best version of yourself. You may be at the effect of negative habits, dependencies, behaviours, thought patterns, relationships, and addictions. You have found yourself trapped between the short-term pleasure you receive and the longer-term pain you experience. Just as the Lovers card speaks to duality and choice, so too does the Devil; however, with the Devil, you are choosing the path of instant gratification, even if it is at the expense of your long-term well-being. In effect, you may have sold your soul to the devil! Today, distance yourself from these alluring temptations for a healthier future.'}},
+    {'name': 'The Tower', 'image': 'images/tower.jpg', 'description': 'Chaos and sudden change.', 'categories': {
         'love': 'a thing', 
         'career': 'another thing',
         'home': 'a thing',
         'friendship': 'a thing',
         'moody':''}},
-    {'name': 'The Devil', 'image': 'images/devil.jpg', 'description': 'we live in a society', 'categories': {
+    {'name': 'The Star', 'image': 'images/star.jpg', 'description': 'Hope and renewal.', 'categories': {
         'love': 'a thing', 
         'career': 'another thing',
         'home': 'a thing',
         'friendship': 'a thing',
         'moody':''}},
-    {'name': 'The Tower', 'image': 'images/tower.jpg', 'description': 'we live in a society', 'categories': {
+    {'name': 'The Moon', 'image': 'images/moon.jpg', 'description': 'Illusions and fear.', 'categories': {
         'love': 'a thing', 
         'career': 'another thing',
         'home': 'a thing',
         'friendship': 'a thing',
         'moody':''}},
-    {'name': 'The Star', 'image': 'images/star.jpg', 'description': 'we live in a society', 'categories': {
+    {'name': 'The Sun', 'image': 'images/sun.jpg', 'description': 'Positivity and fun.', 'categories': {
         'love': 'a thing', 
         'career': 'another thing',
         'home': 'a thing',
         'friendship': 'a thing',
         'moody':''}},
-    {'name': 'The Moon', 'image': 'images/moon.jpg', 'description': 'we live in a society', 'categories': {
+    {'name': 'Judgement', 'image': 'images/judgement.jpg', 'description': 'Rebirth and inner calling.', 'categories': {
         'love': 'a thing', 
         'career': 'another thing',
         'home': 'a thing',
         'friendship': 'a thing',
         'moody':''}},
-    {'name': 'The Sun', 'image': 'images/sun.jpg', 'description': 'we live in a society', 'categories': {
-        'love': 'a thing', 
-        'career': 'another thing',
-        'home': 'a thing',
-        'friendship': 'a thing',
-        'moody':''}},
-    {'name': 'Judgement', 'image': 'images/judgement.jpg', 'description': 'we live in a society', 'categories': {
-        'love': 'a thing', 
-        'career': 'another thing',
-        'home': 'a thing',
-        'friendship': 'a thing',
-        'moody':''}},
-    {'name': 'The World', 'image': 'images/world.jpg', 'description': 'we live in a society', 'categories': {
+    {'name': 'The World', 'image': 'images/world.jpg', 'description': 'Completion and accomplishment', 'categories': {
         'love': 'a thing', 
         'career': 'another thing',
         'home': 'a thing',
