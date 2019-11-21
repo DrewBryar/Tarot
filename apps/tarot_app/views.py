@@ -115,9 +115,9 @@ CARD_LIST = [
         'moody':'If you are going through a difficult time, the Sun brings you the message you have been waiting for: that things will get better, a lot better! Through the challenges along your path, you discovered who you are and why you’re here. Now you are full of energy and zeal for the future and can already perceive success and abundance flowing to you. You are brimming with confidence because you know everything will work out – it always does! Life is good!'}},
     {'name': 'Judgement', 'image': 'images/judgement.jpg', 'description': 'Rebirth and inner calling.', 'categories': {
         'love': 'a thing', 
-        'career': 'another thing',
+        'career': 'Judgement pops up in a Tarot reading when you are close to reaching a significant stage in your journey. You have reviewed and evaluated your past experiences and have learned from them.',
         'home': 'a thing',
-        'friendship': 'a thing',
+        'friendship': 'The Judgement card suggests that you may find comfort in sharing your struggles with others within a friends environment. There will be others who have experienced something similar and who can show you the way to freedom from your troubles. Let them guide you and help you - rise together.',
         'moody':''}},
     {'name': 'The World', 'image': 'images/world.jpg', 'description': 'Completion and accomplishment', 'categories': {
         'love': 'a thing', 
