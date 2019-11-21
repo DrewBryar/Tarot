@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    {% load static %}
-    <!-- CSS -->
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app_name/css/style.css' %}"> -->
-    <title>Lil Tarot Loverz</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  {% load static %}
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'app_name/css/style.css' %}"> -->
+  <title>Lil Tarot Loverz</title>
 </head>
+
 <body>
+
 <h1>Welcome {{request.session.first_name}}!</h1>
 
-<img src="{% static cards.0.image %}" >
-<img src="{% static cards.1.image %}" >
-<img src="{% static cards.2.image %}" >
-<img src="{% static cards.3.image %}" >
-<img src="{% static cards.4.image %}" >
-<img src="{% static cards.5.image %}" >
-<img src="{% static cards.6.image %}" >
-<img src="{% static cards.7.image %}" >
-<img src="{% static cards.8.image %}" >
-<img src="{% static cards.9.image %}" >
-<img src="{% static cards.10.image %}" >
-<img src="{% static cards.11.image %}" >
-<img src="{% static cards.12.image %}" >
-<img src="{% static cards.13.image %}" >
-<img src="{% static cards.14.image %}" >
-<img src="{% static cards.15.image %}" >
-<img src="{% static cards.16.image %}" >
-<img src="{% static cards.17.image %}" >
-<img src="{% static cards.18.image %}" >
-<img src="{% static cards.19.image %}" >
-<img src="{% static cards.20.image %}" >
 
 
     <nav class="navbar navbar-inverse">
@@ -50,5 +35,9 @@
           </ul>
         </div>
       </nav>
+
+  <img src="{% static cards.0.image %}" />
+
 </body>
+
 </html>
