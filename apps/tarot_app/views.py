@@ -199,7 +199,7 @@ def index(request):
     context = {
         "cards" : CARD_LIST
     }
-    return render(request, "tarot_app/tarot.html",context)
+    return render(request, "tarot_app/login.html",context)
 
 
 def register(request):
