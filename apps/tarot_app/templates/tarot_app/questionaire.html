@@ -48,13 +48,19 @@
       <div class="hero col-md-6 col-md-offset-1">
         <h1>Welcome {{request.session.first_name}}!</h1>
         <h2>What Thread of Fate Shall We Pull?</h2>
-        <form action="#" method = "POST">
+        <form action="" method = "POST">
             {% csrf_token%}
-            ????<input>
-            ????<input>
-            ????<input>
-            ????<input>
+            
+            <input type="checkbox">
+            <label>Career</label><br>
+            <input type="checkbox">
+            <label>Friends</label><br>
+            <input type="checkbox">
+            <label>Family</label><br>
+            <input type="checkbox">
+            <label>Love</label><br>
             <input type = "submit">
+
         </form>
       </div>
       

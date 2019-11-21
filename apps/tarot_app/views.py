@@ -253,4 +253,14 @@ def logout(request):
 
 
 def tarot_question(request):
-    return render('tarot_app/questionaire.html')
+    return render(request, 'tarot_app/questionaire.html')
+
+def tarot_question_mood(request):
+    if request.method=="POST":
+        # do stuff
+        return redirect("/tarot/questionaire/mood_ask")
+
+def tarot_question_mood_ask(request):
+    if request.method=="POST":
+        #morestuff
+        return redirect("/")
