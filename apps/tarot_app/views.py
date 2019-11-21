@@ -4,13 +4,25 @@ from .models import *
 import bcrypt
 
 CARD_LIST = [
-    {'name': 'The Fool', 'image': 'images/fool.jpg', 'description': 'Free spirit and unlimited potential.', 'categories': {'love': 'The Fool encourages you to have an open, curious mind and a sense of excitement. Throw caution to the wind and be ready to embrace the unknown, leaving behind any fear, worry or anxiety about what may or may not happen. Today is about new experiences, personal growth, development, and adventure.', 'career': 'This is a time of great potential and opportunity for you right now. The world is your oyster, and anything can happen. Use your creative mind with a dash of spontaneity to make the most of this magical time and bring forth your new ideas in powerful ways.', 'feeling_bad':'This is an excellent card to meditate on if you are struggling with dread, worry or self-doubt in your life. The Fool is your guide, as someone who is daring and carefree. He is the embodiment of who you really are – your free spirit, your inner child, and your playful soul. Any time you experience fear, remember the essence of the Fool as he encourages you to acknowledge that fear and do it anyway! You never know what the future holds, but like the Fool, you must step into the unknown, trusting that the Universe will catch you and escort you along the way. Take a chance and see what happens.'}},
-    {'name': 'The Magician', 'image': 'images/magician.jpg', 'description': 'Resourcefulness and power.', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing' }},
-    {'name': 'The High Priestess', 'image': 'images/high_priestess.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
-    {'name': 'The Empress', 'image': 'images/empress.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
-    {'name': 'The Emperor', 'image': 'images/emperor.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
-    {'name': 'The Hierophant', 'image': 'images/hierophant.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
-    {'name': 'The Lovers', 'image': 'images/lovers.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'The Fool', 'image': 'images/fool.jpg', 'description': 'Free spirit and unlimited potential.', 'categories': {
+        'love': 'The Fool encourages you to have an open, curious mind and a sense of excitement. Throw caution to the wind and be ready to embrace the unknown, leaving behind any fear, worry     or anxiety about what may or may not happen. Today is about new experiences, personal growth, development, and adventure.', 
+        'career': 'This is a time of great potential and opportunity for you right now. The world is your oyster, and anything can happen. Use your creative mind with a dash of spontaneity to     make the most of this magical time and bring forth your new ideas in powerful ways.', 
+        'moody':'This is an excellent card to meditate on if you are struggling with dread, worry or self-doubt in your life. The Fool is your guide, as someone who is daring and            carefree. He is the embodiment of who you really are – your free spirit, your inner child, and your playful soul. Any time you experience fear, remember the essence of the Fool as he encourages you to acknowledge that fear and do it anyway! You never know what the future holds, but like the Fool, you must step into the unknown, trusting that the Universe will catch you and escort you along the way. Take a chance and see what happens.'}},
+    {'name': 'The Magician', 'image': 'images/magician.jpg', 'description': 'Resourcefulness and power.', 'categories': {
+        'love': 'a thing', 
+        'career': 'The Magician brings you the tools, resources and energy you need to make your dreams come true. Seriously, everything you need right now is at your fingertips. You have the  spiritual (fire), physical (earth), mental (air) and emotional (water) resources to manifest your desires. And when you combine them with the energy of the spiritual and earthly realms, you will become a manifestation powerhouse! The key is to bring these tools together synergistically so that the impact of what you create is greater than the separate parts. Put your work into motion today. All you are missing today is discipline and momentum.',
+        'home': 'a thing',
+        'friendship': 'a thing' }},
+    {'name': 'The High Priestess', 'image': 'images/high_priestess.jpg', 'description': 'we live in a society', 'categories': {
+        'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'The Empress', 'image': 'images/empress.jpg', 'description': 'we live in a society', 'categories': {
+        'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'The Emperor', 'image': 'images/emperor.jpg', 'description': 'we live in a society', 'categories': {
+        'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'The Hierophant', 'image': 'images/hierophant.jpg', 'description': 'we live in a society', 'categories': {
+        'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'The Lovers', 'image': 'images/lovers.jpg', 'description': 'we live in a society', 'categories': {
+        'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
     {'name': 'The Chariot', 'image': 'images/chariot.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
     {'name': 'Strength', 'image': 'images/strength.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
     {'name': 'The Hermit', 'image': 'images/hermit.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
