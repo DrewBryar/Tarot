@@ -12,6 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   {% load static %}
   <!-- CSS -->
+<<<<<<< HEAD
   <!-- <link rel="stylesheet" type="text/css" href="{% static 'app_name/css/style.css' %}"> -->
   <title>Lil Tarot Loverz</title>
 </head>
@@ -21,22 +22,53 @@
 <h1>Welcome {{request.session.first_name}}!</h1>
 
 
+=======
+  <link rel="stylesheet" type="text/css" href="{% static 'tarot_app/css/style.css' %}">
+  <title>Lil Tarot Loverrz</title>
+</head>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">WebSiteName</a>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Lil Tarot Loverrz</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+    </div>
+  </nav>
+
+>>>>>>> 25e5aa6dbd2679ee72c98f005e19820d1d28e4ea
+
+  <div class="row">
+    <div class="hero col-md-6 col-md-offset-1">
+      <h1>Claim Your Fate</h1>
+      <p>This is your grand fate. The burning stars immolate the loom of destiny. The only thing certain is uncertainty.
+      </p>
+    </div>
+    <a href="#"><img src="static/images/tarot_back.jpg" class="img-rounded" alt="card back"></a>
+  </div>
+  <br>
+  <div class="row wall">
+    <div class="col-md-12">
+      <!-- for #reading# in #readings#-->
+      <h2 class="wall_title col-md-12">Tarot Feed</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="static/images/sun.jpg" class="img-rounded popout img-fluid" alt="card back">
+          <div class="overlay">
+            <div class="card_name">ZAWARUDO</div>
+            <div class="user_name">Ariel</div>
+            <div>Drew Likes This!</div>
           </div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-          </ul>
         </div>
-      </nav>
-
-  <img src="{% static cards.0.image %}" />
+      </div>
+    </div>
+  </div>
 
 </body>
 
