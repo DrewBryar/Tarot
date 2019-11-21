@@ -40,6 +40,51 @@ CARD_LIST = [
     {'name': 'Knight of Wands', 'image': 'images/wands_knight.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
     {'name': 'Queen of Wands', 'image': 'images/wands_queen.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
     {'name': 'King of Wands', 'image': 'images/wands_king.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+
+    {'name': 'Ace of Swords', 'image': 'images/swords_ace.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Two of Swords', 'image': 'images/swords_twp.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Three of Swords', 'image': 'images/swords_three.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Four of Swords', 'image': 'images/swords_four.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Five of Swords', 'image': 'images/swords_five.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Six of Swords', 'image': 'images/swords_six.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Seven of Swords', 'image': 'images/swords_seven.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Eight of Swords', 'image': 'images/swords_eight.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Nine of Swords', 'image': 'images/swords_nine.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Ten of Swords', 'image': 'images/swords_ten.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Page of Swords', 'image': 'images/swords_page.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Knight of Swords', 'image': 'images/swords_knight.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Queen of Swords', 'image': 'images/swords_queen.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'King of Swords', 'image': 'images/swords_king.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+
+    {'name': 'Ace of Cups', 'image': 'images/cups_ace.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Two of Cups', 'image': 'images/cups_twp.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Three of Cups', 'image': 'images/cups_three.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Four of Cups', 'image': 'images/cups_four.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Five of Cups', 'image': 'images/cups_five.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Six of Cups', 'image': 'images/cups_six.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Seven of Cups', 'image': 'images/cups_seven.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Eight of Cups', 'image': 'images/cups_eight.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Nine of Cups', 'image': 'images/cups_nine.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Ten of Cups', 'image': 'images/cups_ten.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Page of Cups', 'image': 'images/cups_page.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Knight of Cups', 'image': 'images/cups_knight.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Queen of Cups', 'image': 'images/cups_queen.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'King of Cups', 'image': 'images/cups_king.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+
+    {'name': 'Ace of Pentacles', 'image': 'images/pentacles_ace.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Two of Pentacles', 'image': 'images/pentacles_twp.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Three of Pentacles', 'image': 'images/pentacles_three.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Four of Pentacles', 'image': 'images/pentacles_four.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Five of Pentacles', 'image': 'images/pentacles_five.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Six of Pentacles', 'image': 'images/pentacles_six.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Seven of Pentacles', 'image': 'images/pentacles_seven.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Eight of Pentacles', 'image': 'images/pentacles_eight.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Nine of Pentacles', 'image': 'images/pentacles_nine.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Ten of Pentacles', 'image': 'images/pentacles_ten.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Page of Pentacles', 'image': 'images/pentacles_page.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Knight of Pentacles', 'image': 'images/pentacles_knight.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'Queen of Pentacles', 'image': 'images/pentacles_queen.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
+    {'name': 'King of Pentacles', 'image': 'images/pentacles_king.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
 ]
 
 
@@ -47,7 +92,7 @@ CARD_LIST = [
 
 def index(request):
     context = {
-        "cards":CARD_LIST
+        "cards" : CARD_LIST
     }
     return render(request, "tarot_app/tarot.html",context)
 
