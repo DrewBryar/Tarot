@@ -47,30 +47,20 @@
     <div class="row">
       <div class="hero col-md-6 col-md-offset-1">
         <h1>Welcome {{request.session.first_name}}!</h1>
-        <h2>Claim Your Fate</h2>
-        <p>This is your grand fate. The burning stars immolate the loom of destiny. The only thing certain is
-          uncertainty.
-        </p>
+        <h2>What Thread of Fate Shall We Pull?</h2>
+        <form action="#" method = "POST">
+            {% csrf_token%}
+            ????<input>
+            ????<input>
+            ????<input>
+            ????<input>
+            <input type = "submit">
+        </form>
       </div>
-      <a href="#"><img src="static/images/tarot_back.jpg" class="img-rounded" alt="card back"></a>
+      
     </div>
     <br>
-    <div class="row wall">
-      <div class="col-md-12">
-        <!-- for #reading# in #readings#-->
-        <h2 class="wall_title col-md-12">Tarot Feed</h2>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="static/images/sun.jpg" class="img-rounded popout img-fluid" alt="card back">
-            <div class="overlay">
-              <div class="card_name">ZAWARUDO</div>
-              <div class="user_name">Ariel</div>
-              <div>Drew Likes This!</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
   </body>
 
