@@ -26,37 +26,56 @@
     </div>
 
     <div class="row">
-        <h1>New Registration:</h1>
-        {% if messages %}
-        <ul class='messages'>
-            {% for message in messages %}
-            <li {% if message.tags %} class='{{message.tags}}' {% endif %}>
-                {{message}}
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        <div class="col-md-6">
+        <div class="col-md-offset-1 col-md-4">
+            <h2>New Registration:</h2>
+            {% if messages %}
+            <ul class='messages'>
+                {% for message in messages %}
+                <li {% if message.tags %} class='{{message.tags}}' {% endif %}>
+                    {{message}}
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
             <form action='user/register' method='POST'>
                 {% csrf_token %}
+                <label>First name: </label><br>
+                <input type='text' name='first_name' class="form-control"><br>
+
+                <label>Last name: </label><br>
+                <input type='text' name='last_name' class="form-control"><br>
+
+                <label>City, State: </label><br>
+                <input type='text' name='city_state' class="form-control" value="City, State"><br>
                 
-                First name: <input type='text' name='first_name'><br>
-                Last name: <input type='text' name='last_name'><br>
-                City, State: <input type='text' name='city_state'><br>
-                Email: <input type='email' name='email'><br>
-                Password: <input type='password' name='password'><br>
-                Confirm Password: <input type='password' name='confirm_password'><br>
+                <label>Email: </label><br>
+                <input type='email' class="form-control" name='email'><br>
+                
+                <label>Password: </label><br>
+                <input type='password' class="form-control" name='password'><br>
+                
+                <label>Confirm Password: </label><br>
+                <input type='password' class="form-control" name='confirm_password'><br>
+                
+                <input type='Submit'>
+
+            </form>
+        </div>
+        <div class = "col-md-offset-1 col-md-3">
+            <h2>Log in:</h2>
+            <form action='user/login' method='POST'>
+                {% csrf_token %}
+                <label>Email: </label><br>
+                <input type='email' class="form-control" name='email'><br>
+
+                <label>Password: </label><br>
+                <input type='password' class="form-control" name='password'><br>
+
                 <input type='Submit'>
             </form>
         </div>
     </div>
-    <h1>Log in:</h1>
-    <form action='user/login' method='POST'>
-        {% csrf_token %}
-        Email: <input type='email' name='email'><br>
-        Password: <input type='password' name='password'><br>
-        <input type='Submit'>
-    </form>
+
 </body>
 
 </html>

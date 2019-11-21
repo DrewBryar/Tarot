@@ -214,21 +214,21 @@ def register(request):
             new_user = User.objects.create(
                 first_name=request.POST['first_name'],
                 last_name=request.POST['last_name'],
-                birthday=request.POST['birthday'],
+                city_state= request.POST["city_state"],
                 email=request.POST['email'],
                 password=pw_hash
             )
             request.session['user_id'] = new_user.id
             request.session['first_name'] = new_user.first_name
             request.session['email'] = new_user.email
-            return render(request, 'welcome.html')
+            return render(request, 'tarot.html')
 
 
-def welcome(request):
+def tarot(request):
     if not 'user_id' in request.session:
         messages.error(request, "Please log in!")
         return redirect ('/')
-    return render(request,'welcome.html')
+    return render(request,'tarot_app/tarot.html')
 
 
 def login(request):
@@ -241,7 +241,7 @@ def login(request):
         if bcrypt.checkpw(request.POST['password'].encode(), user.password.encode()): 
             request.session['user_id'] = user.id
             request.session['first_name'] = user.first_name
-            return redirect('/welcome')
+            return redirect('/tarot')
         else:
             messages.error(
                 request, "Either your email or password was input incorrectly.")
@@ -250,3 +250,7 @@ def login(request):
 def logout(request):
     request.session.clear()
     return redirect('/')
+
+
+def tarot_question(request):
+    return render('tarot_app/questionaire.html')
