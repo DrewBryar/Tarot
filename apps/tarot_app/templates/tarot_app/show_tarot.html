@@ -43,9 +43,11 @@
         <row>
             <div>
                 <h2>{{reading.user.first_name}} pulled the {{reading.cardname}}!</h2>
-                <p>{{reading.category}}</p>
+                
                 <p>{{reading.card_content}}</p>
-                <p>{{reading.image}}</p>
+                <img src="{% static '/' %}{{reading.image}}" class="img-rounded popout img-fluid" alt="card back">
+                {% if reading.category }
+                <p>{{reading.category}}</p>
             </div>
         </row>
     </div>
