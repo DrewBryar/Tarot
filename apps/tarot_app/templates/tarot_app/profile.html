@@ -16,34 +16,53 @@
   <!-- <link rel="stylesheet" type="text/css" href="{% static 'app_name/css/style.css' %}"> -->
   <title>Lil Tarot Loverz</title>
 </head>
+
 <body>
-    
-    <h1>Profile of {{user.first_name}} {{user.last_name}}</h1>
 
-    <a href="/tarot">Back</a> | 
-    <a href='/user/logout'>Log Out</a>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <a href="/user/logout" class="btn btn-default navbar-btn pull-right">
+        Logout
+      </a>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Lil Tarot Loverrz</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/tarot">Home</a></li>
+        <li><a href="/user/{{request.session.user_id}}">My Profile</a></li>
+        <li><a href="/tarot/questionaire">Pick a Card</a></li>
+      </ul>
+    </div>
+
+  </nav>
+  
+  <h1>Profile of {{user.first_name}} {{user.last_name}}</h1>
+
+  <a href="/tarot">Back</a> |
+  <a href='/user/logout'>Log Out</a>
 
 
-    <p>ID: {{user.id}}</p>
-    <p>First Name: {{user.first_name}}</p>
-    <p>Last Name: {{user.last_name}}</p>
-    <p>Email: {{user.email}}</p>
-    <p>Member since: {{user.created_at}}</p>
+  <p>ID: {{user.id}}</p>
+  <p>First Name: {{user.first_name}}</p>
+  <p>Last Name: {{user.last_name}}</p>
+  <p>Email: {{user.email}}</p>
+  <p>Member since: {{user.created_at}}</p>
 
-    <h2>Past Readings:</h2>
-    {% for reading in readings %}
-    <p>
-        {{reading.created_at}}
-        <br>
-        <img src="static/{{r.image}}" class="img-rounded popout img-fluid" alt="card back">{{r.image}}"
-        <img src="static/images/chariot.jpg" class="img-rounded popout img-fluid" alt="card back">
-        <img src="static/images/sun.jpg" class="img-rounded popout img-fluid" alt="card back">
-        <p> {{reading.name}}</p>
-        <p><i>"{{reading.card_content}}"</i></p>
-    </p>
-    {% endfor %}
-</p>
+  <h2>Past Readings:</h2>
+  {% for reading in readings %}
+  <p>
+    {{reading.created_at}}
+    <br>
+    <img src="{% static '/' %}{{reading.image}}" class="img-rounded popout img-fluid" alt="card back">
+
+    <!-- <img src="{% static 'app_name/images/image.jpg' %}" /> -->
+    <p> {{reading.name}}</p>
+    <p><i>"{{reading.card_content}}"</i></p>
+  </p>
+  {% endfor %}
+  </p>
 
 
 </body>
+
 </html>
