@@ -304,8 +304,10 @@ def submit_read(request, category):
 
 
 def show_card_result(request, reading_id, user_id):
+    this_card = Reading.objects.get(id = reading_id)
     context = {
-        "readings": Reading.objects.all()
+        "reading": this_card
+
     }
     return render(request, 'tarot_app/show_tarot.html', context)
 
