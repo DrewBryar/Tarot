@@ -287,7 +287,7 @@ def submit_read(request, category):
 
     pulled_card = pullCard()
     verified_card = checkedCard(pulled_card, category)
-    
+    this_user = User.objects.get(id = request.session['user_id'])
 
     this_reading = Reading.objects.create(
         user=User.objects.get(id=request.session['user_id']), 
@@ -298,9 +298,19 @@ def submit_read(request, category):
         image=verified_card['image'], 
         )
     
-    return redirect(f'/reading/{this_reading.id}',)
-def show_reading(request, reading_id):
-    return render
+    return redirect(f'/reading/{this_user.id}/{this_reading.id}',)
+
+
+
+
+def show_card_result(request, reading_id, user_id):
+    context = {
+        "readings": Reading.objects.all()
+    }
+    return render(request, 'tarot_app/show_tarot.html', context)
+
+
+
 
 def showuser(request, user_id):
     person=User.objects.get(id=user_id)

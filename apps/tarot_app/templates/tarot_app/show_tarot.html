@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  {% load static %}
+  <!-- CSS -->
+
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'app_name/css/style.css' %}"> -->
+  <title>Lil Tarot Loverz</title>
+</head>
+<body>
+    
+
+    <a href="/tarot">Back</a> | 
+    <a href='/user/logout'>Log Out</a>
+
+
+    {% for reading in readings}
+        <p>{{reading}}</p>
+    {% endfor %}
+
+
+
+</body>
+</html>
