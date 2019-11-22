@@ -250,17 +250,12 @@ def logout(request):
     request.session.clear()
     return redirect('/')
 
-<<<<<<< HEAD
-def tarot_question(request, ):
-    checkstring = request.POST['categories']
-=======
 def tarot_question(request):
-    checkstring = request.POST['category']
->>>>>>> b25fff900605ddcabbb7b42916473b60a60e842f
-    checkcard = CARD_LIST[randrange(21)]
-    while (checkcard[checkstring] == null){
-        checkcard = CARD_LIST[randrange(21)]
-    }
+    # checkstring = request.POST['category']
+    # checkcard = CARD_LIST[randrange(21)]
+    # while (checkcard[checkstring] == null){
+    #     checkcard = CARD_LIST[randrange(21)]
+    # }
     return render(request, 'tarot_app/questionaire.html')
 
 def tarot_question_mood(request):
