@@ -64,11 +64,13 @@
           <div  class="col-md-3">
             <img src="static/{{r.image}}" class="img-rounded popout img-fluid" alt="card">
             <div class="overlay">
-              <div class="card_name"><b>{{r.cardname}}</b></div>
+              <div class="card_name"><a href="/user/{{r.user.id}}"><b style="color: azure;">{{r.cardname}}</b></a></div>
+              <p>{{r.card_content}}</p>
               <div class="user_name">
-                <h2><a href="/user/{{r.user.id}}">{{r.user.first_name}} {{r.user.last_name}}</a></h2>
+                <h2>{{r.user.first_name}} {{r.user.last_name}}</h2>
                 <i>
-                  <p>{{r.user.city_state}}</p>
+                  <p style="font-size: medium;">{{r.user.city_state}}</p>
+                  <p style="font-size: small;">{{r.created_at}}</p>
                 </i>
               </div>
               <div class='likes'>
