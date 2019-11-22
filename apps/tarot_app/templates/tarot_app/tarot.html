@@ -80,8 +80,10 @@
               <div class="card_name">{{r.cardname}}</div>
 
               <div class='likes'><a href='/reading/{{r.id}}/like'>&#10084;</a>
-                {{r.likes.all|length}}</div>
+                {{r.likes.all|length}}
+              </div>
             </div>
+          </div>
             {% if request.session.user_id == reading.user.id %}
             <a href='/reading/{{r.id}}/delete'>Delete Reading</a><br>
             {% endif %}
