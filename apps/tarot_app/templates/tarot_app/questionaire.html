@@ -49,17 +49,21 @@
         <h1>Welcome {{request.session.first_name}}!</h1>
         <h2>What Thread of Fate Shall We Pull?</h2>
 
-        <form action="" method = "POST">
+        <form action="/tarot/questionaire/process" method = "POST">
             {% csrf_token%}
             
-            <input type="checkbox">
+            <input type="radio" name="category" value = "career" >
             <label>Career</label><br>
-            <input type="checkbox">
+            <input type="radio" name="category" value = "friends">
             <label>Friends</label><br>
-            <input type="checkbox">
+            <input type="radio" name="category" value = "family"> 
             <label>Family</label><br>
-            <input type="checkbox">
+            <input type="radio" name="category" value = "love">
             <label>Love</label><br>
+            <input type="radio" name="category" value = "default" checked>
+            <label>Throw the dice!</label><br>
+            
+            
             <input type = "submit">
 
         </form>

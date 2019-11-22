@@ -188,6 +188,23 @@ CARD_LIST = [
     {'name': 'King of Pentacles', 'image': 'images/pentacles_king.jpg', 'description': 'we live in a society', 'categories': {'love': 'a thing', 'career': 'another thing','home': 'a thing','friendship': 'a thing'}},
 ]
 
+def pullCard():
+    card_number = randrange(21)
+    pulled_card = CARD_LIST[card_number]
+    return pulled_card
+
+
+def checkedCard(pulled_card, category):
+  if category not in pulled_card["categories"]:
+      print("Nope")
+      pulled_card = pullCard()        
+      checkedCard(pulled_card, category)
+  else:
+      print(pulled_card["name"])
+      print(pulled_card["categories"][category])
+      print("Got it!")
+      return pulled_card
+
 
 
 
@@ -251,30 +268,39 @@ def logout(request):
     return redirect('/')
 
 def tarot_question(request):
-    checkstring = request.POST['category']
-    checkcard = CARD_LIST[randrange(21)]
+    # checkstring = request.POST['category']
+    # checkcard = CARD_LIST[randrange(21)]
     return render(request, 'tarot_app/questionaire.html')
 
-def tarot_question_mood(request):
-    if request.method=="POST":
-        # do stuff
-        return redirect("/tarot/questionaire/mood_ask")
-def tarot_question_mood_ask(request):
+def question_process(request):
+    chosen_category = request.POST['category']
+    return redirect(f"/tarot/questionaire/{chosen_category}/mood")
+
+def tarot_question_mood(request, category):
+    context ={
+        "category" : category
+    }
+    return render(request, "tarot_app/mood.html", context)
+
+
+def submit_read(request, category):
+
+    pulled_card = pullCard()
+    verified_card = checkedCard(pulled_card, category)
     
-        #morestuff
-        return redirect("/")
 
-def submit_read(request):
-    Reading.objects.create(
+    this_reading = Reading.objects.create(
         user=User.objects.get(id=request.session['user_id']), 
-        cardname=request.POST['cardname'], 
-        category=request.POST['category'],
+        cardname=verified_card["name"], 
+        category=category,
         mood=request.POST['mood'],  
-        card_content=request.POST['card_content'],
-        image=request.POST['image'], 
+        card_content=verified_card['description'],
+        image=verified_card['image'], 
         )
-    return redirect('/reading')
-
+    
+    return redirect(f'/reading/{this_reading.id}',)
+def show_reading(request, reading_id):
+    return render
 
 def showuser(request, user_id):
     person=User.objects.get(id=user_id)

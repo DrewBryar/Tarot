@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tarot_app/css/style.css' %}">
     <title>My Profile</title>
 </head>
 <body>
@@ -25,7 +30,8 @@
     <p>
         {{reading.created_at}}
         <br>
-        <p> {{reading.image}}</p>
+        <img src="{% static 'tarot_app/example.jpg' %}" class="img-rounded popout img-fluid" alt="card back">{{reading.image}}"
+        <img src="/apps/tarot_app/static/images/chariot.jpg" class="img-rounded popout img-fluid" alt="card back">
         <p> {{reading.name}}</p>
         <p><i>"{{reading.card_content}}"</i></p>
     </p>
