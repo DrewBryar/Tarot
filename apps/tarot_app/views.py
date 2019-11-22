@@ -217,7 +217,7 @@ def register(request):
             request.session['user_id'] = new_user.id
             request.session['first_name'] = new_user.first_name
             request.session['email'] = new_user.email
-            return render(request, 'tarot.html')
+            return render(request, 'tarot_app/tarot.html')
 
 
 def tarot(request):
@@ -250,8 +250,13 @@ def logout(request):
     request.session.clear()
     return redirect('/')
 
+<<<<<<< HEAD
 def tarot_question(request, ):
     checkstring = request.POST['categories']
+=======
+def tarot_question(request):
+    checkstring = request.POST['category']
+>>>>>>> b25fff900605ddcabbb7b42916473b60a60e842f
     checkcard = CARD_LIST[randrange(21)]
     while (checkcard[checkstring] == null){
         checkcard = CARD_LIST[randrange(21)]
@@ -262,9 +267,8 @@ def tarot_question_mood(request):
     if request.method=="POST":
         # do stuff
         return redirect("/tarot/questionaire/mood_ask")
-
 def tarot_question_mood_ask(request):
-    if request.method=="POST":
+    
         #morestuff
         return redirect("/")
 
