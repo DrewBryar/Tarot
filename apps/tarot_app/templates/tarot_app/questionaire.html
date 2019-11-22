@@ -37,7 +37,7 @@
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#">Page 1</a></li>
           <li><a href="#">Page 2</a></li>
-          <li><a href="#">Page 3</a></li>
+          <li><a href="#">My Profile</a></li>
         </ul>
       </div>
 
@@ -49,7 +49,7 @@
         <h1>Welcome {{request.session.first_name}}!</h1>
         <h2>What Thread of Fate Shall We Pull?</h2>
 
-        <form action="/" method = "POST">
+        <form action="" method = "POST">
             {% csrf_token%}
             
             <input type="checkbox">
@@ -61,7 +61,6 @@
             <input type="checkbox">
             <label>Love</label><br>
             <input type = "submit">
-
 
         </form>
       </div>

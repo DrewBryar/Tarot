@@ -37,7 +37,7 @@
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#">Page 1</a></li>
           <li><a href="#">Page 2</a></li>
-          <li><a href="#">Page 3</a></li>
+          <li><a href="/user/{{user.id}}">My Profile</a></li>
         </ul>
       </div>
 
@@ -64,10 +64,15 @@
           <div class="col-md-3">
             <img src="static/images/sun.jpg" class="img-rounded popout img-fluid" alt="card back">
             <div class="overlay">
+              <div class="user_name">Ariel Pang <i>Chicago, IL</i></div>
               <div class="card_name">ZAWARUDO</div>
-              <div class="user_name">Ariel</div>
-              <div>Drew Likes This!</div>
+              
+              <div class='likes'><a href='/reading/{{reading.id}}/like'>&#10084;</a>
+                {{reading.likes.all|length}}</div>
             </div>
+            {% if request.session.user_id == reading.user.id %}
+            <a href='/reading/{{reading.id}}/delete'>Delete Reading</a><br>
+            {% endif %}
           </div>
         </div>
       </div>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Profile</title>
+</head>
+<body>
+    
+    <h1>Welcome {{request.session.first_name}}!</h1>
+
+    <a href="/tarot">Back</a> | 
+    <a href='/user/logout'>Log Out</a>
+
+
+    <p>ID: {{user.id}}</p>
+    <p>First Name: {{user.first_name}}</p>
+    <p>Last Name: {{user.last_name}}</p>
+    <p>Email: {{user.email}}</p>
+    <p>Member since: {{user.created_at}}</p>
+
+    <h2>Past Readings:</h2>
+    {% for reading in readings %}
+    <p>
+        {{reading.created_at}}
+        <br>
+        <p> {{reading.image}}</p>
+        <p> {{reading.name}}</p>
+        <p><i>"{{reading.card_content}}"</i></p>
+    </p>
+    {% endfor %}
+</p>
+
+
+</body>
+</html>
