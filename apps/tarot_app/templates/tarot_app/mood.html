@@ -52,6 +52,7 @@
             <form action="/tarot/questionaire/{{category}}/mood_ask" method="POST">
                 {% csrf_token %}
                 <select id="mood_form" name="mood" class="form-control">
+                        <option value="good"></option>
                     <option value="good">I'm fine.</option>
                     <option value="bad">Actually, life's been pretty hard on me lately.</option>
                 </select><br>

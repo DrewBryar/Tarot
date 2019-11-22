@@ -36,18 +36,14 @@
         </div>
 
     </nav>
-    <a href="/tarot">Back</a> |
-    <a href='/user/logout'>Log Out</a>
 
     <div>
         <row>
             <div>
-                <h2>{{reading.user.first_name}} pulled the {{reading.cardname}}!</h2>
-                
-                <p>{{reading.card_content}}</p>
+                <h2>{{reading.user.first_name}}, you pulled the {{reading.cardname}}!</h2>
                 <img src="{% static '/' %}{{reading.image}}" class="img-rounded popout img-fluid" alt="card back">
-                {% if reading.category }
-                <p>{{reading.category}}</p>
+                <p><i>{{reading.card_content}}</i></p>
+                <p>{{reading.paragraph}}</p>
             </div>
         </row>
     </div>

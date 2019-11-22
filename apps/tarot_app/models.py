@@ -42,6 +42,7 @@ class Reading(models.Model):
     category = models.CharField(max_length=50)
     mood = models.CharField(max_length=50)
     card_content = models.CharField(max_length=50)
+    paragraph = models.CharField(max_length=500)
     image = models.CharField(max_length=50)
     likes = models.ManyToManyField(User, blank=True, related_name='liked_reading')
     created_at = models.DateTimeField(auto_now_add=True)
