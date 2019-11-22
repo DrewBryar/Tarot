@@ -360,11 +360,12 @@ def submit_read(request, category):
         image=verified_card['image'],
     )
 
-    return redirect(f'/reading/{this_reading.id}',)
+    # return redirect(f'/reading/{this_reading.id}',)
+    return redirect('/tarot')
 
 
 def show_reading(request, reading_id):
-    return render
+    return render(request, 'tarot_app/tarot.html')
 
 
 def showuser(request, user_id):
