@@ -223,7 +223,10 @@ def tarot(request):
     if not 'user_id' in request.session:
         messages.error(request, "Please log in!")
         return redirect ('/')
-    return render(request,'tarot_app/tarot.html')
+    context ={
+        'readings': Reading.objects.all()
+    }
+    return render(request,'tarot_app/tarot.html', context)
 
 
 def login(request):
@@ -258,3 +261,42 @@ def tarot_question_mood_ask(request):
     if request.method=="POST":
         #morestuff
         return redirect("/")
+
+def submit_read(request):
+    Reading.objects.create(
+        user=User.objects.get(id=request.session['user_id']), 
+        cardname=request.POST['cardname'], 
+        category=request.POST['category'],
+        mood=request.POST['mood'],  
+        card_content=request.POST['card_content'],
+        image=request.POST['image'], 
+        )
+    return redirect('/reading')
+
+
+def showuser(request, user_id):
+    person=User.objects.get(id=user_id)
+    context = {
+        'user': User.objects.get(id=user_id),
+        'readings': Reading.objects.filter(user=person)
+    }
+    return render(request, 'tarot_app/profile.html', context)
+
+def delete(request, reading_id):
+    Reading.objects.get(id=reading_id).delete()
+    return redirect('/tarot')
+
+def like(request, reading_id):
+    reading=Reading.objects.get(id=reading_id)
+    user=User.objects.get(id=request.session['user_id'])
+    user.liked_reading.add(reading)
+    user.save()
+    return redirect('/tarot')
+
+
+def unlike(request, reading_id):
+    reading=Reading.objects.get(id=reading_id)
+    user=User.objects.get(id=request.session['user_id'])
+    user.liked_reading.remove(reading)
+    user.save()
+    return redirect('/tarot')
