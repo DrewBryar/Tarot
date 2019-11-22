@@ -70,7 +70,7 @@
         <!-- for #reading# in #readings#-->
         <h2 class="wall_title col-md-12">Tarot Feed</h2>
         <div class="row">
-          {% for r in readings%}
+          {% for r in readings reversed %}
           <div class="col-md-3">
             <img src="static/{{r.image}}" class="img-rounded popout img-fluid" alt="card">
             <div class="overlay">
@@ -79,11 +79,11 @@
                 </i></div>
               <div class="card_name">{{r.cardname}}</div>
 
-              <div class='likes'><a href='/reading/{{reading.id}}/like'>&#10084;</a>
-                {{reading.likes.all|length}}</div>
+              <div class='likes'><a href='/reading/{{r.id}}/like'>&#10084;</a>
+                {{r.likes.all|length}}</div>
             </div>
             {% if request.session.user_id == reading.user.id %}
-            <a href='/reading/{{reading.id}}/delete'>Delete Reading</a><br>
+            <a href='/reading/{{r.id}}/delete'>Delete Reading</a><br>
             {% endif %}
             {% endfor %}
           </div>
