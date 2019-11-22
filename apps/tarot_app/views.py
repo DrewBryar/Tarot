@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
 from .models import *
 import bcrypt
+import random
 
 CARD_LIST = [
     {'name': 'The Fool', 'image': 'images/fool.jpg', 'description': 'Free spirit and unlimited potential.', 'categories': {
