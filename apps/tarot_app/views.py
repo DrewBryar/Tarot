@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
 from .models import *
 import bcrypt
-import random
+from random import ranrange
 
 CARD_LIST = [
     {'name': 'The Fool', 'image': 'images/fool.jpg', 'description': 'Free spirit and unlimited potential.', 'categories': {
@@ -251,6 +251,8 @@ def logout(request):
     return redirect('/')
 
 def tarot_question(request):
+    checkstring = request.POST['categories']
+    checkcard = CARD_LIST[randrange(21)]
     return render(request, 'tarot_app/questionaire.html')
 
 def tarot_question_mood(request):
