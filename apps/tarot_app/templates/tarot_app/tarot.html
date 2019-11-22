@@ -72,11 +72,11 @@
           {% for r in readings reversed %}
           <!-- <div class="row"> -->
           <div  class="col-md-3">
-            <img src="static/{{r.image}}" class="img-rounded popout img-fluid" alt="card">
+              <img src="static/{{r.image}}" class="img-rounded popout img-fluid" alt="card">
             <div class="overlay">
               <div class="card_name"><b>{{r.cardname}}</b></div>
               <div class="user_name">
-                <h2>{{r.user.first_name}} {{r.user.last_name}}</h2>
+                <h2><a href='/reading/{{r.user.id}}/{{r.id}}'>{{r.user.first_name}} {{r.user.last_name}}</a></h2>
                 <i>
                   <p>{{r.user.city_state}}</p>
                 </i>
@@ -88,6 +88,7 @@
                   <a href='/reading/{{r.id}}/delete'>Delete</a></p>
               </div>
             </div>
+          </div>
             {% endif %}
             {% endfor %}
           </div>
