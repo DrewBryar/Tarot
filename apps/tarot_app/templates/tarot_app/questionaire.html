@@ -3,76 +3,71 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- BOOTSTRAP -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  {% load static %}
-  <!-- CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    {% load static %}
+    <!-- CSS -->
 
-  <!-- <link rel="stylesheet" type="text/css" href="{% static 'app_name/css/style.css' %}"> -->
-  <title>Lil Tarot Loverz</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app_name/css/style.css' %}"> -->
+    <title>Lil Tarot Loverz</title>
 </head>
+
+
 
 <body>
 
-
-  <link rel="stylesheet" type="text/css" href="{% static 'tarot_app/css/style.css' %}">
-  <title>Lil Tarot Loverrz</title>
-  </head>
-
-  <body>
     <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <a href="/user/logout" class="btn btn-default navbar-btn pull-right">
-          Logout
-        </a>
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Lil Tarot Loverrz</a>
+        <div class="container-fluid">
+            <a href="/user/logout" class="btn btn-default navbar-btn pull-right">
+                Logout
+            </a>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Lil Tarot Loverrz</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/tarot">Home</a></li>
+                <li><a href="/user/{{request.session.user_id}}">My Profile</a></li>
+                <li><a href="/tarot/questionaire">Pick a Card</a></li>
+            </ul>
         </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="/tarot">Home</a></li>
-          <li><a href="#">Page 1</a></li>
-          <li><a href="#">Page 2</a></li>
-          <li><a href="/user/{{request.session.user_id}}">My Profile</a></li>
-        </ul>
-      </div>
 
     </nav>
 
 
     <div class="row">
-      <div class="hero col-md-6 col-md-offset-1">
-        <h1>Welcome {{request.session.first_name}}!</h1>
-        <h2>What Thread of Fate Shall We Pull?</h2>
+        <div class="hero col-md-6 col-md-offset-1">
+            <h1>Welcome {{request.session.first_name}}!</h1>
+            <h2>What Thread of Fate Shall We Pull?</h2>
 
-        <form action="/tarot/questionaire/process" method = "POST">
-            {% csrf_token%}
-            
-            <input type="radio" name="category" value = "career" >
-            <label>Career</label><br>
-            <input type="radio" name="category" value = "friends">
-            <label>Friends</label><br>
-            <input type="radio" name="category" value = "family"> 
-            <label>Family</label><br>
-            <input type="radio" name="category" value = "love">
-            <label>Love</label><br>
-            <input type="radio" name="category" value = "default" checked>
-            <label>Throw the dice!</label><br>
-            
-            
-            <input type = "submit">
+            <form action="/tarot/questionaire/process" method="POST">
+                {% csrf_token%}
 
-        </form>
-      </div>
-      
+                <input type="radio" name="category" value="career">
+                <label>Career</label><br>
+                <input type="radio" name="category" value="friends">
+                <label>Friends</label><br>
+                <input type="radio" name="category" value="family">
+                <label>Family</label><br>
+                <input type="radio" name="category" value="love">
+                <label>Love</label><br>
+                <input type="radio" name="category" value="default" checked>
+                <label>Throw the dice!</label><br>
+
+
+                <input type="submit">
+
+            </form>
+        </div>
+
     </div>
     <br>
 
 
-  </body>
+</body>
 
 </html>

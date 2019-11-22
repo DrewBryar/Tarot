@@ -17,62 +17,56 @@
     <title>Lil Tarot Loverz</title>
 </head>
 
+
 <body>
 
-
-    <link rel="stylesheet" type="text/css" href="{% static 'tarot_app/css/style.css' %}">
-    <title>Lil Tarot Loverrz</title>
-    </head>
-
-    <body>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <a href="#" class="btn btn-default navbar-btn pull-right">
-                    Logout
-                </a>
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Lil Tarot Loverrz</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                </ul>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <a href="/user/logout" class="btn btn-default navbar-btn pull-right">
+                Logout
+            </a>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Lil Tarot Loverrz</a>
             </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/tarot">Home</a></li>
+                <li><a href="/user/{{request.session.user_id}}">My Profile</a></li>
+                <li><a href="/tarot/questionaire">Pick a Card</a></li>
+            </ul>
+        </div>
 
-        </nav>
+    </nav>
 
-        <row>
-            <div class="col-md-offset-1 col-md-8">
-                <h1>Personal Care</h1>
-                <p>We all know that things like {{context}} are important, but positive mental health is important to
-                    maintain. Please, let us know how you're doing personally before we move on.
-                </p>
-            </div>
+    <row>
+        <div class="col-md-offset-1 col-md-8">
+            <h1>Personal Care</h1>
+            <p>We all know that things like {{context}} are important, but positive mental health is important to
+                maintain. Please, let us know how you're doing personally before we move on.
+            </p>
+        </div>
 
 
-        </row>
-        <row>
-            <div class="col-md-offset-3 col-md-5">
-                <form action="/tarot/questionaire/{{category}}/mood_ask" method="POST">
-                    {% csrf_token %}
-                    <select id="mood_form" name="mood" class="form-control">
-                        <option value ="good">I'm fine.</option>
-                        <option value = "bad">Actually, life's been pretty hard on me lately.</option>
-                    </select><br>
-                    <p>Tell us more:</p><br>
-                    <textarea class ="col-md-8 form form-control">
+    </row>
+    <row>
+        <div class="col-md-offset-3 col-md-5">
+            <form action="/tarot/questionaire/{{category}}/mood_ask" method="POST">
+                {% csrf_token %}
+                <select id="mood_form" name="mood" class="form-control">
+                    <option value="good">I'm fine.</option>
+                    <option value="bad">Actually, life's been pretty hard on me lately.</option>
+                </select><br>
+                <p>Tell us more:</p><br>
+                <textarea class="col-md-8 form form-control">
 
                     </textarea><br>
 
-                    <input type="submit">
-                </form>
-            </div>
-        </row>
-        <p>Big Mood</p>
+                <input type="submit">
+            </form>
+        </div>
+    </row>
+    <p>Big Mood</p>
 
 
-    </body>
+</body>
 
 </html>
