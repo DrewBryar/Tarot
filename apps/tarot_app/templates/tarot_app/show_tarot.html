@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    {% load static %}
+    <!-- CSS -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app_name/css/style.css' %}"> -->
+    <title>Lil Tarot Loverz</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <a href="/user/logout" class="btn btn-default navbar-btn pull-right">
+                Logout
+            </a>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Lil Tarot Loverrz</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/tarot">Home</a></li>
+                <li><a href="/user/{{request.session.user_id}}">My Profile</a></li>
+                <li><a href="/tarot/questionaire">Pick a Card</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div>
+        <row>
+            <div>
+                <h2>{{reading.user.first_name}}, you pulled the {{reading.cardname}}!</h2>
+                <img src="{% static '/' %}{{reading.image}}" class="img-rounded popout img-fluid" alt="card back">
+                <p><i>{{reading.card_content}}</i></p>
+                <p>{{reading.paragraph}}</p>
+            </div>
+        </row>
+    </div>
+
+
+    <!-- user = models.ForeignKey(User, related_name ='readings')
+    cardname = models.CharField(max_length=50)
+    category = models.CharField(max_length=50)
+    mood = models.CharField(max_length=50)
+    card_content = models.CharField(max_length=50)
+    image = models.CharField(max_length=50)
+    likes = models.ManyToManyField(User, blank=True, related_name='liked_reading')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True) -->
+</body>
+
+</html>
