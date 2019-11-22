@@ -35,9 +35,9 @@
     <p>
         {{reading.created_at}}
         <br>
-        <img src="static/{{reading.image}}" class="img-rounded popout img-fluid" alt="card back">{{reading.image}}"
-        <img src="static/images/chariot.jpg" class="img-rounded popout img-fluid" alt="card back">
-        <img src="static/images/sun.jpg" class="img-rounded popout img-fluid" alt="card back">
+        <img src="{% static '/' %}{{reading.image}}" class="img-rounded popout img-fluid" alt="card back">
+        
+        <!-- <img src="{% static 'app_name/images/image.jpg' %}" /> -->
         <p> {{reading.name}}</p>
         <p><i>"{{reading.card_content}}"</i></p>
     </p>
