@@ -234,7 +234,7 @@ def register(request):
             request.session['user_id'] = new_user.id
             request.session['first_name'] = new_user.first_name
             request.session['email'] = new_user.email
-            return render(request, 'tarot_app/tarot.html')
+            return redirect('/tarot')
 
 
 def tarot(request):
