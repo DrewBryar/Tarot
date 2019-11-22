@@ -216,7 +216,7 @@ def register(request):
             request.session['user_id'] = new_user.id
             request.session['first_name'] = new_user.first_name
             request.session['email'] = new_user.email
-            return render(request, 'tarot.html')
+            return render(request, 'tarot_app/tarot.html')
 
 
 def tarot(request):
@@ -254,8 +254,7 @@ def tarot_question_mood(request):
     if request.method=="POST":
         # do stuff
         return redirect("/tarot/questionaire/mood_ask")
-
 def tarot_question_mood_ask(request):
-    if request.method=="POST":
+    
         #morestuff
-        return redirect("/")
+        return render("/")
