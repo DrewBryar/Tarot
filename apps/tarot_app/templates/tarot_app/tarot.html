@@ -27,7 +27,7 @@
   <body>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
-        <a href="#" class="btn btn-default navbar-btn pull-right">
+        <a href="/user/logout" class="btn btn-default navbar-btn pull-right">
           Logout
         </a>
         <div class="navbar-header">
@@ -37,7 +37,7 @@
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#">Page 1</a></li>
           <li><a href="#">Page 2</a></li>
-          <li><a href="/user/{{user.id}}">My Profile</a></li>
+          <li><a href="/user/{{request.session.user_id}}">My Profile</a></li>
         </ul>
       </div>
 
